@@ -1,0 +1,88 @@
+
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <form action="print.html" method="post">
+    <tr>
+        <td><label for="First name">first name</label></td>
+    <td><input type="text" id="First Name :" name="firstname" placeholder="Your First name"></td>
+   
+</tr>
+<tr>
+    <td><label for="last name">lastname</label></td>
+    <td><input type="text" id="last Name :" name="Lastname" placeholder="Your last name"></td>
+</tr>
+<tr>
+    <td>
+        <label for="adress">Adress</label>
+    </td>
+    <td>
+        <textarea name="adress" id="adress" cols="30" rows="10 placeholder="ENTER YOUR ADRESS"></textarea>
+
+    </td>
+
+</tr>
+<tr>
+    <td>
+        <label for="date of birth">Date of birth</label><td><input type="date" id="dob" name="dob" placeholder="dd-mm-yyyy"></td>
+        
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="gender">Gender:</label>
+    </td>
+    <td>
+        <input type="radio" id="male" name="gender" value="1"/>Male
+        <input type="radio" name="gender" id="female" value="2">Female
+    </td>
+</tr>
+<tr> 
+    <td>
+        <input type="submit" onclick="javascript:saveData();" id="submit">
+    </td>
+    <td>
+        <input type="reset" id="reset" value="reset">
+    </td>
+    
+</tr>
+<tr>
+    <td>
+        <label for="Mobile">Mobile</label>
+    </td>
+    <td>
+        <textarea name="Mobile" id="Mobile"  ></textarea>
+
+    </td>
+
+</tr>
+<tr>
+    <td>
+        <label for="Email">Email</label>
+    </td>
+    <td>
+        <textarea name="Email" id="Email"  ></textarea>
+
+    </td>
+
+</tr>
+
+</form>
+<script>
+    function saveData(){
+        var firstName=document.getElementById('firstName').value;
+        var lastName=document.getElementById('lastName').value;
+        var adress=document.getElementById('adress').value;
+
+        localStorage.setItem('firstName',firstName);
+        localStorage.setItem('lastName',lastName);
+        localStorage.setItem('adress',adress);
+    }
+</script>
+</table>
+
+</body>
+</html>

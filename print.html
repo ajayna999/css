@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Print
+        </title>
+    </head>
+    <body>
+        dsubmitted details:
+        <input type="button" name="btnShow" value="Show Data" onclick="javascript:showData();"/>
+        First name:<label id="1b1Firstname"></label>
+        Welcome <span id="fullname"></span>! Your adress is <span id="adress"></span>
+<script>
+             function showData(){
+             var firstname= localstorage.getItem('firstname');
+             var lastname= localstorage.getItem('lastName');
+             var adress= localstorage.getItem('adress');
+             console.log(firstname);
+             document.getElementById('fullName').innerHTML=firstName+" "+lastName;
+             document.getElementById('adress').innerHTML=adress;
+             document.getElementById('1b1Firstname').innerHTML= firstName
+             }
+
+
+</script>
+
+    </body>
+</html>
